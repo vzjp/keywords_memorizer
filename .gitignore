@@ -1,5 +1,7 @@
 # md file itself
 markdown-files/*.md
+!markdown-files/example.md
+
 #done file
 done/
 
