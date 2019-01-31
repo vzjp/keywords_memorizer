@@ -1,5 +1,7 @@
 # md file itself
 markdown-files/*.md
+#done file
+done/
 
 #mac config file
 .DS_Store
