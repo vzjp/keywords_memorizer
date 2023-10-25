@@ -34,7 +34,7 @@ def anki(filename):
 		content += line
 		line = fi.readline()
 	fi.close()
-	md = markdown.Markdown(extensions=['tables'])
+	md = markdown.Markdown()
 	content = Markup(md.convert(content))
 	return render_template('template_markdown.html', **locals())
 
