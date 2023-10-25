@@ -20,6 +20,10 @@ def toha_braker(file_name, keyword_separator='とは、'):
                 # output.mdに書き込み
                 with open('output.md', 'a', encoding='utf-8') as f:
                     f.write(line)
+            else:
+                # そのままoutput.mdに書き込み
+                with open('output.md', 'a', encoding='utf-8') as f:
+                    f.write(line)
         
 
 if __name__ == "__main__":
