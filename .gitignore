@@ -2,6 +2,9 @@
 markdown-files/*.md
 !markdown-files/example.md
 
+# secret files
+secret/
+
 #done file
 done/
 
