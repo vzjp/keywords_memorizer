@@ -8,7 +8,7 @@ import re
 import os
 import sys
 
-def toha_braker(file_name, keyword_separator='とは、'):
+def toha_braker(file_name, keyword_separator='(とは、)'):
     with open(file_name, 'r', encoding='utf-8') as f:
         lines = f.readlines()
         for line in lines:
@@ -16,7 +16,7 @@ def toha_braker(file_name, keyword_separator='とは、'):
             regex = re.compile(r'^- (.*)' + keyword_separator)
             if re.match(regex, line):
                 # 「xxxとは」のxxx部分を<code>タグで囲む
-                line = re.sub(regex, '- <code>\\1</code>', line)
+                line = re.sub(regex, '- <code>\\1</code>\\2', line)
                 # output.mdに書き込み
                 with open('output.md', 'a', encoding='utf-8') as f:
                     f.write(line)
